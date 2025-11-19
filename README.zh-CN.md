@@ -55,6 +55,7 @@
 ### 环境变量配置
 
 参考 `example.env.server` 文件，本地运行时重命名为 `.env.server` 并填写以下配置：
+环境变量可以在 cloudflare pages 中设置-》变量和机密中设置
 
 ```env
 # Github Clien ID
@@ -74,7 +75,7 @@ ENABLE_CACHE=true
 本项目主推 Cloudflare Pages 以及 Docker 部署， Vercel 需要你自行搞定数据库，其他支持的数据库可以查看 https://db0.unjs.io/connectors 。
 
 1. 在 Cloudflare Worker 控制面板创建 D1 数据库
-2. 在 `wrangler.toml` 中配置 `database_id` 和 `database_name`(在 pages 页面直接配置也是可以的)
+2. 在 `wrangler.toml` 中配置 `database_id` 和 `database_name`(在 pages 页面直接配置也是可以的，绑定的名字设置为`NEWSNOW_DB`)
 3. 若无 `wrangler.toml` ，可将 `example.wrangler.toml` 重命名并修改配置
 4. 重新部署生效
 
